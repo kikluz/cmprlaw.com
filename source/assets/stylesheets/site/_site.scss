@@ -19,7 +19,7 @@ h1 {
 .overflow {
 	overflow: hidden;
 	@include media($medium-screen) {
-		height: 460px;
+		height: 400px;
 	}
 	img {
 		width: 100%;
@@ -38,6 +38,7 @@ h1 {
 // ------------------------------------------------------------
 // Site Nav
 // ------------------------------------------------------------
+$mobile-nav-breakpoint: $medium-screen + 15;
 
 .site-nav {
 	@include clearfix;
@@ -50,7 +51,7 @@ h1 {
 			margin-right:1em;
 			display: block;
 		}
-		@include media($medium-screen) {
+		@include media($mobile-nav-breakpoint) {
 			float: left;
 		}
 	}
@@ -65,13 +66,13 @@ h1 {
 		height: 0;
 		overflow: hidden;
 
-		@include media($medium-screen) {
+		@include media($mobile-nav-breakpoint) {
 			height: auto;
 		}
 
 		a {
 			@include trailing-hovers;
-			@include media($medium-screen) {
+			@include media($mobile-nav-breakpoint) {
 				display: block;
 				float: left;
 				line-height: 0;
@@ -81,7 +82,7 @@ h1 {
 		}
 
 		.nav-right {
-			@include media($medium-screen) {
+			@include media($mobile-nav-breakpoint) {
 				float: right;
 			}
 		}
@@ -98,7 +99,7 @@ h1 {
 	right: 1.1em;
 	z-index: 2;
 
-	@include media($medium-screen) {
+	@include media($mobile-nav-breakpoint) {
 		display: none;
 	}
 
