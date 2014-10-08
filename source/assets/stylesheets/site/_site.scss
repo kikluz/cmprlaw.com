@@ -3,7 +3,7 @@
 // ------------------------------------------------------------
 h1 {
 	display: none;
-	color: $primary-blue;
+	color: $dark-blue;
 	@include media($medium-screen) {
 		font-size: 40px;
 		display: block;
@@ -103,7 +103,7 @@ h1 {
 
   
 #first-col {
-  background: url('../images/default.png');
+  background: url('../images/recruiting.png');
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -115,7 +115,7 @@ h1 {
     
   }
 #third-col {
-  background: url('../images/overflow.png');
+  background: url('../images/contact-us.png');
   background-repeat: no-repeat;
   background-size: cover;
   }  
