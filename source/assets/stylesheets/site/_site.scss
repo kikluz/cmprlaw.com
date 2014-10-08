@@ -95,7 +95,7 @@ h1 {
 
   .grid-item p {
     margin: auto;
-    color: transparentize($red, .1);
+    color: transparentize($primary-blue, .1);
     @include media($medium-screen) {
       max-width: 70%;
     }
