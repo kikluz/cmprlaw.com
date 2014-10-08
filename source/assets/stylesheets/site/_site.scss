@@ -7,7 +7,11 @@ h1 {
 	@include media($medium-screen) {
 		font-size: 40px;
 		display: block;
+		margin-top: 0px;
 	}
+}
+.llp-word {
+	font-size: 18px;
 }
 .site-header {
 	@include clearfix;
@@ -30,6 +34,91 @@ h1 {
 		}
 	}
 	// move images to index page to find the path
+}
+// ------------------------------------------------------------
+// Three columns Grid
+// ------------------------------------------------------------
+
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+
+}
+
+.grid-items {
+  $grid-items-background: $white-smoke;
+  $grid-item-background: desaturate($base-accent-color, 20); 
+  $grid-item-colors: 
+    desaturate($base-accent-color, 10), 
+    #3581A5, 
+    #5FBEBE,
+    #98C79A,
+    #A7A891, 
+    #BDCC97,
+    #979EA0;
+  $grid-item-border-size: 9px;
+  $grid-item-columns: 4;
+  $grid-item-big-columns: 8;
+  $grid-item-color: white;
+  $grid-item-height: 14em;
+
+  @include clearfix;
+    
+  .grid-item {
+    @include transition (all 0.2s ease-in-out);
+    height: $grid-item-height;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    overflow: hidden;
+    float: left;
+    padding: 2em;
+    border-top: 0;
+    border-bottom: 9px solid $white;
+    border-left: 9px solid $white;
+    border-right: 9px;
+    text-align: center;
+    cursor: pointer;
+
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-columns);
+    }
+  }
+
+  
+
+  .grid-item h1 {
+    color: $primary-blue;
+    font-size: 1.5em;
+    margin-bottom: .4em;
+  }
+
+  .grid-item p {
+    margin: auto;
+    color: transparentize($primary-blue, .1);
+    @include media($medium-screen) {
+      max-width: 70%;
+    }
+  }
+    
+
+  
+#first-col {
+  background: url('../images/default.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  }
+#second-col {
+  background: url('../images/vines-field.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+    
+  }
+#third-col {
+  background: url('../images/overflow.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  }  
 }
 .site-main{}
 .site-footer{}
@@ -59,8 +148,11 @@ $mobile-nav-breakpoint: $medium-screen + 15;
 
 	.site-logo {
 		display: block;
-		border-radius: 100%;
 		margin: auto;
+		margin-bottom: 18px;
+		@include media($medium-screen ) {
+			display: none;
+		}
 	}
 
 	.nav-links {
@@ -69,6 +161,7 @@ $mobile-nav-breakpoint: $medium-screen + 15;
 
 		@include media($mobile-nav-breakpoint) {
 			height: auto;
+			float: right;
 		}
 
 		a {
@@ -79,12 +172,6 @@ $mobile-nav-breakpoint: $medium-screen + 15;
 				line-height: 0;
 				height: 0;
 				padding: .6em 1.5em;
-			}
-		}
-
-		.nav-right {
-			@include media($mobile-nav-breakpoint) {
-				float: right;
 			}
 		}
 	}
@@ -122,6 +209,85 @@ $mobile-nav-breakpoint: $medium-screen + 15;
 			display: block;
 			padding: .5em;
 			text-align:center;
+
 		}
 	}
+}
+
+
+// ------------------------------------------------------------
+// footer
+// ------------------------------------------------------------
+.site-footer{}
+
+.footer {
+  $footer-background: desaturate(darken($white-smoke, 6), 20);
+  $footer-color: $dark-red;
+  $footer-link-color: transparentize($footer-color, .2);
+  $footer-disclaimer-color: transparentize($footer-color, .6);
+
+  background: $white-smoke;
+  padding: $base-line-height*2 $gutter;
+  width: 100%;
+ 
+
+  .footer-links {
+    @include clearfix;
+    margin-bottom: $base-line-height;
+
+    @include media($medium-screen) {
+      @include shift(3);
+    }
+  }
+
+  ul {
+    margin-bottom: $base-line-height*2;
+
+    @include media($medium-screen) {
+      @include span-columns(3);
+      @include omega(3n);
+      @include clearfix;
+    }
+  }
+  a {
+  	color: $red;
+  }
+
+  li {
+    text-align: center;
+
+    @include media($medium-screen) {
+      text-align: left;
+    }
+  }
+
+  li a {
+    color: $red;
+
+    &:hover {
+      color: transparentize($dark-red, 0);
+    }
+  }
+
+  li h3 {
+    color: $dark-red;
+    font-size: 1em;
+    font-weight: 800;
+    margin-bottom: .4em;
+  }  
+
+  hr {
+    border: 1px solid transparentize($white-smoke, .9);
+    margin: 0 auto $base-line-height;
+    width: 10em;
+  }
+
+  p {
+    color: $light-red;
+    font-size: .9em;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 35em;
+    text-align: center;
+  }
 }
