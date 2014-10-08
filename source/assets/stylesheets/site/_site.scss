@@ -36,6 +36,17 @@ h1 {
 	}
 	// move images to index page to find the path
 }
+
+// ------------------------------------------------------------
+// section-grid
+// ------------------------------------------------------------
+
+.main-section {
+  margin: 40px;
+  @include outer-container;
+  aside { @include span-columns(3); }
+  article { @include span-columns(9); }
+}
 // ------------------------------------------------------------
 // Three columns Grid
 // ------------------------------------------------------------
