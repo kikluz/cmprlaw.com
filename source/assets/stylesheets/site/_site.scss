@@ -147,7 +147,17 @@ $mobile-nav-breakpoint: $medium-screen + 15;
 		}
 	}
 
-	
+	.site-logo {
+		display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+		@include media($medium-screen ) {
+			display: none;
+		}
+    a {
+      color: $white-smoke;
+    }
+	}
 
 	.nav-links {
 		height: 0;
