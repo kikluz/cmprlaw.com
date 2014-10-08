@@ -88,14 +88,14 @@ h1 {
   
 
   .grid-item h1 {
-    color: $primary-blue;
+    color: $dark-blue;
     font-size: 1.5em;
     margin-bottom: .4em;
   }
 
   .grid-item p {
     margin: auto;
-    color: transparentize($primary-blue, .1);
+    color: transparentize($red, .1);
     @include media($medium-screen) {
       max-width: 70%;
     }
