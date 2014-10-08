@@ -3,7 +3,8 @@
 // ------------------------------------------------------------
 h1 {
 	display: none;
-	color: $dark-blue;
+  font-family: 'Droid Serif', serif; font-weight: 400;
+	color: $white-smoke;
 	@include media($medium-screen) {
 		font-size: 40px;
 		display: block;
@@ -15,7 +16,7 @@ h1 {
 }
 .site-header {
 	@include clearfix;
-	background-color: $white-smoke;
+	background-color: $dark-blue;
 	padding:1em;
 }
 // ------------------------------------------------------------
@@ -148,7 +149,6 @@ $mobile-nav-breakpoint: $medium-screen + 15;
 
 	.site-logo {
 		display: block;
-		margin: auto;
 		margin-bottom: 18px;
 		@include media($medium-screen ) {
 			display: none;
@@ -158,6 +158,7 @@ $mobile-nav-breakpoint: $medium-screen + 15;
 	.nav-links {
 		height: 0;
 		overflow: hidden;
+    font-family: helvetica, arial, sans-serif;
 
 		@include media($mobile-nav-breakpoint) {
 			height: auto;
@@ -165,6 +166,7 @@ $mobile-nav-breakpoint: $medium-screen + 15;
 		}
 
 		a {
+      color: $white-smoke;
 			@include trailing-hovers;
 			@include media($mobile-nav-breakpoint) {
 				display: block;
@@ -195,6 +197,7 @@ $mobile-nav-breakpoint: $medium-screen + 15;
 		display: block;
 		font-size: 2em;
 		cursor: pointer;
+    color: $white-smoke;
 	}
 }
 
@@ -209,7 +212,7 @@ $mobile-nav-breakpoint: $medium-screen + 15;
 			display: block;
 			padding: .5em;
 			text-align:center;
-
+      color: $white-smoke;
 		}
 	}
 }
@@ -221,12 +224,12 @@ $mobile-nav-breakpoint: $medium-screen + 15;
 .site-footer{}
 
 .footer {
-  $footer-background: desaturate(darken($white-smoke, 6), 20);
-  $footer-color: $dark-red;
+  $footer-background: desaturate(darken($dark-blue, 6), 20);
+  $footer-color: $white-smoke;
   $footer-link-color: transparentize($footer-color, .2);
   $footer-disclaimer-color: transparentize($footer-color, .6);
 
-  background: $white-smoke;
+  background: $dark-blue;
   padding: $base-line-height*2 $gutter;
   width: 100%;
  
@@ -250,7 +253,7 @@ $mobile-nav-breakpoint: $medium-screen + 15;
     }
   }
   a {
-  	color: $red;
+  	color: $white-smoke;
   }
 
   li {
@@ -262,15 +265,15 @@ $mobile-nav-breakpoint: $medium-screen + 15;
   }
 
   li a {
-    color: $red;
+    color: $white-smoke;
 
     &:hover {
-      color: transparentize($dark-red, 0);
+      color: transparentize($light-blue, 0);
     }
   }
 
   li h3 {
-    color: $dark-red;
+    color: $white;
     font-size: 1em;
     font-weight: 800;
     margin-bottom: .4em;
@@ -283,7 +286,7 @@ $mobile-nav-breakpoint: $medium-screen + 15;
   }
 
   p {
-    color: $light-red;
+    color: $white-smoke;
     font-size: .9em;
     line-height: 1.5em;
     margin: auto;
