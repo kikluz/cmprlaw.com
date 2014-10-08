@@ -44,7 +44,11 @@ h1 {
 .main-section {
   margin: 40px;
   @include outer-container;
-  aside { @include span-columns(3); }
+  aside {
+    @include media($medium-screen) {
+    @include span-columns(3);
+     }
+   }
   article { @include span-columns(9); }
 }
 // ------------------------------------------------------------
