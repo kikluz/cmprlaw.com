@@ -147,13 +147,7 @@ $mobile-nav-breakpoint: $medium-screen + 15;
 		}
 	}
 
-	.site-logo {
-		display: block;
-		margin-bottom: 18px;
-		@include media($medium-screen ) {
-			display: none;
-		}
-	}
+	
 
 	.nav-links {
 		height: 0;
