@@ -2,10 +2,11 @@
 // Layout
 // ------------------------------------------------------------
 h1 {
-	font-size: 20px;
+	display: none;
 	color: $primary-blue;
 	@include media($medium-screen) {
-		font-size: 50px;
+		font-size: 40px;
+		display: block;
 	}
 }
 .site-header {
