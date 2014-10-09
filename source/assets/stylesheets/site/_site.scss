@@ -17,6 +17,7 @@ h1 {
 .site-header {
 	@include clearfix;
 	background-color: $dark-blue;
+  border-bottom: solid 1px $dark-red;
 	padding:1em;
 }
 // ------------------------------------------------------------
@@ -46,11 +47,18 @@ h1 {
   margin: 40px;
   @include outer-container;
   aside {
+    margin-top: -90px;
+
     @include media($medium-screen) {
     @include span-columns(3);
+    margin-top: auto;
+    margin-right: 0;
      }
    }
-  article { @include span-columns(9); }
+  article { 
+    @include span-columns(8); 
+
+  }
 }
 // ------------------------------------------------------------
 // Three columns Grid
@@ -113,26 +121,27 @@ h1 {
     margin: auto;
     color: transparentize($primary-blue, .1);
     @include media($medium-screen) {
-      max-width: 70%;
+      max-width: 100%;
     }
   }
     
 
   
 #first-col {
-  background: url('../images/recruiting.png');
+  background-color: $white-smoke;
+  
   background-repeat: no-repeat;
   background-size: cover;
 
   }
 #second-col {
-  background: url('../images/vines-field.png');
+   background-color: $white-smoke;
   background-repeat: no-repeat;
   background-size: cover;
     
   }
 #third-col {
-  background: url('../images/contact-us.png');
+  background-color: $white-smoke;
   background-repeat: no-repeat;
   background-size: cover;
   }  
