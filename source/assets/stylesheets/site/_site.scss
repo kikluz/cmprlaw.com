@@ -5,6 +5,7 @@ h1 {
 	display: none;
   font-family: 'Droid Serif', serif; font-weight: 400;
 	color: $white-smoke;
+  margin-top: -10px;
 	@include media($medium-screen) {
 		font-size: 40px;
 		display: block;
@@ -56,8 +57,10 @@ h1 {
      }
    }
   article { 
-    @include span-columns(8); 
 
+     @include media($medium-screen) {
+    @include span-columns(8); 
+  }
   }
 }
 // ------------------------------------------------------------
