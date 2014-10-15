@@ -7,7 +7,7 @@ h1 {
 	color: $white-smoke;
   margin-top: -10px;
 	@include media($medium-screen) {
-		font-size: 40px;
+		font-size: 32px;
 		display: block;
 		margin-top: 0px;
 	}
