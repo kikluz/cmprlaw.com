@@ -27,9 +27,8 @@ h1 {
 
 .overflow {
 	overflow: hidden;
-	@include media($medium-screen) {
-		height: 400px;
-	}
+	max-height: 300px;
+	
 	img {
 		width: 100%;
 		height: auto;
@@ -45,25 +44,25 @@ h1 {
 // ------------------------------------------------------------
 
 .main-section {
-  margin: 40px;
+  margin: 2em 0;
   @include outer-container;
   aside {
     margin-top: -90px;
 
     @include media($medium-screen) {
-    @include span-columns(3);
-    margin-top: auto;
-    margin-right: 0;
-    text-align: center;
+      @include span-columns(3);
+      margin-top: auto;
+      margin: 0;
+      text-align: center;
      }
    }
   article { 
 
      @include media($medium-screen) {
     @include span-columns(8); 
-    font-size: 1.3em;
-
-  }
+      font-size: 1.3em;
+      margin: 0px;
+    }
   }
 }
 // ------------------------------------------------------------
@@ -99,7 +98,7 @@ h1 {
     height: $grid-item-height;
     width: 100%;
     margin-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 0;
     overflow: hidden;
     float: left;
     padding: 2em;
