@@ -54,12 +54,15 @@ h1 {
     @include span-columns(3);
     margin-top: auto;
     margin-right: 0;
+    text-align: center;
      }
    }
   article { 
 
      @include media($medium-screen) {
     @include span-columns(8); 
+    font-size: 1.3em;
+
   }
   }
 }
