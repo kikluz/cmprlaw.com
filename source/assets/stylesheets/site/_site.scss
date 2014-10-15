@@ -48,6 +48,9 @@ h1 {
   @include outer-container;
   aside {
     margin-top: -90px;
+    img {
+
+    }
 
     @include media($medium-screen) {
       @include span-columns(3);
@@ -58,10 +61,10 @@ h1 {
    }
   article { 
 
-     @include media($medium-screen) {
-    @include span-columns(8); 
+    @include media($medium-screen) {
+      @include span-columns(9); 
       font-size: 1.3em;
-      margin: 0px;
+      margin: 0 0 0 .5em;
     }
   }
 }
