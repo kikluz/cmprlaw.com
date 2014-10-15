@@ -17,8 +17,8 @@ h1 {
 }
 .site-header {
 	@include clearfix;
-	background-color: $dark-blue;
-  border-bottom: solid 1px $dark-red;
+	background-color: $primary-blue;
+  border-bottom: solid 1px $dark-blue;
 	padding:1em;
 }
 // ------------------------------------------------------------
@@ -262,12 +262,12 @@ $mobile-nav-breakpoint: $medium-screen + 15;
 .site-footer{}
 
 .footer {
-  $footer-background: desaturate(darken($dark-blue, 6), 20);
+  $footer-background: desaturate(darken($primary-blue, 2), 20);
   $footer-color: $white-smoke;
   $footer-link-color: transparentize($footer-color, .2);
   $footer-disclaimer-color: transparentize($footer-color, .6);
 
-  background: $dark-blue;
+  background: $primary-blue;
   padding: $base-line-height*2 $gutter;
   width: 100%;
  
