@@ -71,6 +71,12 @@ h1 {
   }
 }
 // ------------------------------------------------------------
+// Find us class
+// ------------------------------------------------------------
+.find-us {
+  margin: 15px;
+}
+// ------------------------------------------------------------
 // Three columns Grid
 // ------------------------------------------------------------
 
@@ -82,6 +88,7 @@ h1 {
 .grid-items {
   display: none;
    @include media($medium-screen) {
+    display: block;
   $grid-items-background: $white-smoke;
   $grid-item-background: desaturate($base-accent-color, 20); 
   $grid-item-colors: 
