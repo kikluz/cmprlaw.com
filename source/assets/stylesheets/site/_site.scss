@@ -80,6 +80,8 @@ h1 {
 }
 
 .grid-items {
+  display: none;
+   @include media($medium-screen) {
   $grid-items-background: $white-smoke;
   $grid-item-background: desaturate($base-accent-color, 20); 
   $grid-item-colors: 
@@ -155,7 +157,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   }  
-}
+}}
 .site-main{}
 .site-footer{}
 
